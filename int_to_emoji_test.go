@@ -33,6 +33,11 @@ func TestToEmoji(t *testing.T) {
 			number:         0,
 			expectedString: "0️⃣",
 		},
+		{
+			desc:           "Multiple digits repeated",
+			number:         54465,
+			expectedString: "5️⃣4️⃣4️⃣6️⃣5️⃣",
+		},
 	}
 	for _, tC := range testCases {
 		t.Run(tC.desc, func(t *testing.T) {
